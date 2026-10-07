@@ -11,6 +11,10 @@
     margin: 0; padding: 0;
     background: transparent;
     font-family: "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .stage {
@@ -84,7 +88,7 @@
 
   /* ── Título central ──────────────────────────────── */
   .center {
-    position: absolute; left: 50%; top: 47%;
+    position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     width: 34%; text-align: center; pointer-events: none;
     opacity: 0;
@@ -154,7 +158,7 @@
   const stage = document.getElementById("stage");
   const svg   = document.getElementById("lines");
   const NS    = "http://www.w3.org/2000/svg";
-  const CX = 50, CY = 47;
+  const CX = 50, CY = 50;
 
   ITEMS.forEach((it, i) => {
     const ang = (-90 + (360 / ITEMS.length) * i) * Math.PI / 180;
